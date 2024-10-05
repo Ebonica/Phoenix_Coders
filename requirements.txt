@@ -1,0 +1,5 @@
+Django==3.2
+ollama  # Assuming the local Ollama package or API is installed separately
+aiohttp==3.7.4
+Pillow==8.2.0
+asyncio==3.4.3
