@@ -1,88 +1,44 @@
-# Phoenix_Coders
+# Master README
 
-NutriScan
-NutriScan is a web application that uses computer vision and machine learning to identify food items from images and provide nutritional information. It's designed to help users quickly and easily get information about the food they're eating.
-Features
+**Phoenix_Coders - Master (Med Bot & NutriScan)**
 
-Real-time camera feed for food image capture
-Image processing to identify food items
-Nutritional information display for identified foods
-Responsive design for use on various devices
-Progress indicators for image upload and processing
+This project combines **Med Bot** and **NutriScan** into a unified Django web application. Med Bot provides an AI-powered medical chatbot using the **Ollama Llama 3.2** model, while NutriScan uses computer vision to identify food items and display nutritional information.
 
-Technologies Used
+## Features
+- **Med Bot**: AI-driven chatbot for medical queries.
+- **NutriScan**: Real-time food image recognition with nutritional info.
+- User authentication with chat and scan history stored for personalized responses.
 
-Frontend: HTML, CSS, JavaScript
-Backend: Python, Django
-Image Processing: Pillow (Python Imaging Library)
-Machine Learning: Ollama (Local LLM for image recognition and analysis)
-Asynchronous Processing: aiohttp, asyncio
+## Installation
+1. **Clone the repository**:
 
-Prerequisites
-Before you begin, ensure you have met the following requirements:
+   git clone https://github.com/Ebonica/Phoenix_Coders
+   cd master
 
-Python 3.8 or higher
-pip (Python package manager)
-Node.js and npm (for managing frontend dependencies, if any)
-Ollama set up and running locally (for image recognition)
-
-Installation
-
-Clone the repository:
-Copygit clone https://github.com/yourusername/nutriscan.git
-cd nutriscan
-
-Create a virtual environment and activate it:
-Copypython -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-
-Install the required Python packages:
-Copypip install -r requirements.txt
-
-Apply database migrations:
-Copypython manage.py migrate
-
-Create a superuser (optional):
-Copypython manage.py createsuperuser
+2. **Set up virtual environment**:
+  
+   python -m venv venv
+   source venv/bin/activate  # Windows: venv\Scripts\activate
 
 
-Configuration
+3. **Install dependencies**:
 
-Ensure Ollama is running locally on the default port (usually 11434).
-Update the OLLAMA_URL in food_recognition/views.py if your Ollama instance is running on a different port or host.
-Configure your Django SECRET_KEY and other sensitive settings in a .env file (not included in version control).
+   pip install -r requirements.txt
 
-Running the Application
 
-Start the Django development server:
-Copypython manage.py runserver
+4. **Migrate the database**:
 
-Open a web browser and navigate to http://localhost:8000
+   python manage.py migrate
 
-Usage
 
-Allow camera access when prompted by your browser.
-Point your camera at a food item.
-Click the "Capture Image" button.
-Wait for the image to be processed and analyzed.
-View the identified food item and its nutritional information.
+5. **Run the server**:
 
-Contributing
-Contributions to NutriScan are welcome! Please follow these steps:
+   python manage.py runserver
 
-Fork the repository.
-Create a new branch: git checkout -b feature-branch-name.
-Make your changes and commit them: git commit -m 'Add some feature'.
-Push to the original branch: git push origin feature-branch-name.
-Create the pull request.
 
-Alternatively, see the GitHub documentation on creating a pull request.
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
-Contact
-If you want to contact me, you can reach me at your ebonica7@gmail.com
-Acknowledgements
+## Usage
+1. **Med Bot**: Log in to interact with the AI chatbot for medical advice.
+2. **NutriScan**: Use the camera to scan food items and get nutritional information.
 
-Django
-Ollama
-Pillow
+## License
+This project is licensed under the MIT License.
